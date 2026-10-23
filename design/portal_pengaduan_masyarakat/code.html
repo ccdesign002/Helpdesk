@@ -1,0 +1,743 @@
+<!DOCTYPE html>
+
+<html lang="id"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_standard" name="shell-type"/><title>LaporDaerah - Portal Pengaduan Resmi Pemerintah Daerah</title><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Plus+Jakarta+Sans:wght@600;700&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "on-primary": "#ffffff", "on-secondary-fixed": "#001e30", "secondary": "#19648f", "primary-fixed-dim": "#8bcef9", "inverse-surface": "#263143", "error": "#ba1a1a", "outline": "#70787f", "secondary-fixed-dim": "#8fcdfd", "tertiary-fixed-dim": "#d4c69d", "on-primary-fixed": "#001e2d", "surface-dim": "#cfdaf2", "secondary-container": "#8fcdfd", "secondary-fixed": "#cae6ff", "tertiary": "#685e3c", "on-surface": "#111c2d", "primary-container": "#086288", "tertiary-container": "#b8aa83", "surface-tint": "#10658b", "on-error": "#ffffff", "on-tertiary-fixed": "#221b02", "on-tertiary-fixed-variant": "#504627", "surface-variant": "#d8e3fb", "surface-container-highest": "#d8e3fb", "surface-container-low": "#f0f3ff", "on-primary-fixed-variant": "#004c6b", "tertiary-fixed": "#f1e2b7", "outline-variant": "#c0c7cf", "on-primary-container": "#a5dbff", "inverse-on-surface": "#ecf1ff", "surface-container-high": "#dee8ff", "on-surface-variant": "#40484e", "on-tertiary": "#ffffff", "on-secondary-container": "#005881", "surface-container-lowest": "#ffffff", "background": "#f9f9ff", "on-secondary": "#ffffff", "on-background": "#111c2d", "surface": "#f9f9ff", "inverse-primary": "#8bcef9", "surface-container": "#e7eeff", "on-secondary-fixed-variant": "#004b70", "on-error-container": "#93000a", "primary-fixed": "#c6e7ff", "surface-bright": "#f9f9ff", "primary": "#004967", "on-tertiary-container": "#483f20", "error-container": "#ffdad6" }, "borderRadius": { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, "spacing": { "space-sm": "0.5rem", "space-md": "1rem", "gutter-sm": "1rem", "space-xl": "2.5rem", "space-lg": "1.5rem", "margin": "2rem", "space-xs": "0.25rem", "gutter": "1.5rem", "margin-mobile": "1rem" }, "fontFamily": { "body-lg": ["Inter"], "headline-xl-mobile": ["Plus Jakarta Sans"], "headline-lg": ["Plus Jakarta Sans"], "body-sm": ["Inter"], "body-md": ["Inter"], "headline-lg-mobile": ["Plus Jakarta Sans"], "headline-sm": ["Plus Jakarta Sans"], "label-lg": ["Plus Jakarta Sans"], "headline-xl": ["Plus Jakarta Sans"], "title-md": ["Plus Jakarta Sans"], "headline-md": ["Plus Jakarta Sans"], "label-md": ["Plus Jakarta Sans"], "label-sm": ["Plus Jakarta Sans"] }, "fontSize": { "body-lg": ["16px", { "lineHeight": "26px", "fontWeight": "400" }], "headline-xl-mobile": ["30px", { "lineHeight": "38px", "letterSpacing": "-0.01em", "fontWeight": "700" }], "headline-lg": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.02em", "fontWeight": "700" }], "body-sm": ["12px", { "lineHeight": "18px", "fontWeight": "400" }], "body-md": ["14px", { "lineHeight": "22px", "fontWeight": "400" }], "headline-lg-mobile": ["24px", { "lineHeight": "32px", "letterSpacing": "-0.01em", "fontWeight": "700" }], "headline-sm": ["20px", { "lineHeight": "28px", "fontWeight": "600" }], "label-lg": ["14px", { "lineHeight": "20px", "letterSpacing": "0.01em", "fontWeight": "600" }], "headline-xl": ["40px", { "lineHeight": "48px", "letterSpacing": "-0.02em", "fontWeight": "700" }], "title-md": ["16px", { "lineHeight": "24px", "fontWeight": "600" }], "headline-md": ["24px", { "lineHeight": "32px", "letterSpacing": "-0.01em", "fontWeight": "600" }], "label-md": ["12px", { "lineHeight": "16px", "letterSpacing": "0.02em", "fontWeight": "600" }], "label-sm": ["11px", { "lineHeight": "14px", "letterSpacing": "0.03em", "fontWeight": "700" }] } } } };</script></head><body class="bg-background font-body-md text-body-md text-on-surface antialiased"><header class="fixed top-0 left-0 right-0 w-full z-50 bg-surface-container-lowest/95 backdrop-blur-md shadow-[0_1px_8px_rgba(8,98,136,0.06)]"><div class="h-20 max-w-7xl mx-auto px-margin flex items-center justify-between gap-gutter"><div class="flex items-center gap-space-md"><img alt="Logo LaporDaerah" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1Va-MLiOtp1tvq0NIxAJugJ578xQotoqQl1vGRqiZ82-zW81LifEnU05lb8mxz7mASwSF8LkXXBLqK2Xg9TATodnjpTkIMaJcpodorWFUMZan-PQru7mS3cboHpBeYIkG-aRFEuqNPQF1zPUo55mRfyg6t2nbwVkgogZ1lkEOeOpX9pfAjVyTLaxf61GtuuhYtSyTfHeozk8QYPUlJNVcHfKgV3pOMNcMwENXHnWeDuzUS3Tgk0Lcbs3k8"/><div class="flex flex-col"><span class="font-title-md text-title-md text-primary leading-tight tracking-tight">LaporDaerah</span><span class="font-label-sm text-label-sm text-on-surface-variant font-medium">Pemerintah Daerah Terintegrasi</span></div></div><nav class="hidden xl:flex items-center gap-space-sm" data-active-classes="bg-surface-container-high text-primary font-title-md rounded-lg"><a aria-current="page" class="px-space-md py-space-sm transition-colors bg-surface-container-high text-primary font-title-md rounded-lg" data-path="portal-pengaduan-masyarakat" href="#">Beranda</a><a class="px-space-md py-space-sm font-label-lg text-label-lg text-on-surface-variant hover:text-primary hover:bg-surface-container-low rounded-lg transition-colors" data-path="buat-pengaduan" href="#">Buat Pengaduan</a><a class="px-space-md py-space-sm font-label-lg text-label-lg text-on-surface-variant hover:text-primary hover:bg-surface-container-low rounded-lg transition-colors" data-path="cek-status-tiket" href="#">Cek Status Tiket</a><a class="px-space-md py-space-sm font-label-lg text-label-lg text-on-surface-variant hover:text-primary hover:bg-surface-container-low rounded-lg transition-colors" data-path="kategori-dan-alur" href="#">Kategori &amp; Alur</a><a class="px-space-md py-space-sm font-label-lg text-label-lg text-on-surface-variant hover:text-primary hover:bg-surface-container-low rounded-lg transition-colors" data-path="faq-dan-panduan" href="#">FAQ &amp; Panduan</a><a class="px-space-md py-space-sm font-label-lg text-label-lg text-on-surface-variant hover:text-primary hover:bg-surface-container-low rounded-lg transition-colors" data-path="kontak-instansi" href="#">Kontak Instansi</a></nav><div class="flex items-center gap-space-md"><a class="hidden sm:inline-flex items-center justify-center px-space-lg py-space-sm font-label-lg text-label-lg text-primary hover:text-primary bg-secondary-fixed/50 hover:bg-secondary-fixed rounded-lg transition-colors" data-path="login-petugas" href="#">Masuk Admin / Petugas</a><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="w-full pt-20 bg-background min-h-screen"><div class="flex flex-col w-full">
+<!-- SECTION 1: HERO SECTION -->
+<section class="relative w-full overflow-hidden bg-surface-container-lowest py-space-xl lg:py-24 shadow-sm">
+<!-- Ambient subtle illumination circles -->
+<div class="absolute -top-32 -left-32 w-96 h-96 rounded-full bg-primary-fixed/30 blur-3xl pointer-events-none"></div>
+<div class="absolute -bottom-32 -right-32 w-96 h-96 rounded-full bg-tertiary-fixed/30 blur-3xl pointer-events-none"></div>
+<div class="max-w-7xl mx-auto px-margin-mobile sm:px-margin relative z-10">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter items-center">
+<!-- Left Hero Copy -->
+<div class="lg:col-span-7 flex flex-col gap-space-lg">
+<div class="inline-flex items-center gap-space-xs px-space-md py-space-xs rounded-full bg-surface-container-high w-fit">
+<span class="inline-block w-2.5 h-2.5 rounded-full bg-primary animate-pulse"></span>
+<span class="font-label-md text-label-md text-primary tracking-wide uppercase">Kanal Komunikasi Terintegrasi Pemda</span>
+</div>
+<h1 class="font-headline-xl text-headline-xl-mobile sm:text-headline-xl text-on-surface tracking-tight leading-tight">
+            Sampaikan Suara Anda, Wujudkan <span class="text-primary-container underline decoration-tertiary-fixed decoration-4 underline-offset-8">Pelayanan Publik</span> yang Lebih Baik dan Terbuka
+          </h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl leading-relaxed">
+            LaporDaerah adalah kanal resmi pengaduan publik Pemerintah Daerah yang terintegrasi, transparan, dan terukur untuk masyarakat dan ASN/PNS. Setiap keluhan diproses sesuai standar operasional yang terjamin akuntabilitasnya.
+          </p>
+<!-- Dual CTA Buttons -->
+<div class="flex flex-wrap items-center gap-space-md pt-space-xs">
+<a class="inline-flex items-center justify-center gap-space-sm px-space-xl py-space-md rounded-lg bg-primary hover:bg-primary-container text-on-primary font-label-lg text-label-lg shadow-md transition-all duration-200 hover:-translate-y-0.5" href="#portal-interaktif" onclick="switchMainTab('form')">
+<span class="material-symbols-outlined text-[20px]">edit_note</span>
+<span>Tulis Laporan Sekarang</span>
+</a>
+<a class="inline-flex items-center justify-center gap-space-sm px-space-lg py-space-md rounded-lg bg-tertiary-fixed hover:bg-tertiary-container/30 text-on-tertiary-fixed font-label-lg text-label-lg shadow-sm transition-all duration-200" href="#portal-interaktif" onclick="switchMainTab('status')">
+<span class="material-symbols-outlined text-[20px]">manage_search</span>
+<span>Cek Status Tiket Anda</span>
+</a>
+</div>
+<!-- Live Badges -->
+<div class="flex flex-wrap items-center gap-space-lg pt-space-md border-t-0">
+<div class="flex items-center gap-space-sm">
+<div class="w-10 h-10 rounded-full bg-primary-fixed/50 flex items-center justify-center">
+<span class="material-symbols-outlined text-primary text-[20px]">check_circle</span>
+</div>
+<div class="flex flex-col">
+<span class="font-headline-sm text-headline-sm text-primary leading-none">98.4%</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Tingkat Tindak Lanjut</span>
+</div>
+</div>
+<div class="h-8 w-px bg-surface-variant hidden sm:block"></div>
+<div class="flex items-center gap-space-sm">
+<div class="w-10 h-10 rounded-full bg-tertiary-fixed/60 flex items-center justify-center">
+<span class="material-symbols-outlined text-tertiary text-[20px]">timer</span>
+</div>
+<div class="flex flex-col">
+<span class="font-headline-sm text-headline-sm text-primary leading-none">1x24 Jam</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Rata-rata Respon Pertama</span>
+</div>
+</div>
+<div class="h-8 w-px bg-surface-variant hidden sm:block"></div>
+<div class="flex items-center gap-space-sm">
+<div class="w-10 h-10 rounded-full bg-surface-container-high flex items-center justify-center">
+<span class="material-symbols-outlined text-secondary text-[20px]">shield</span>
+</div>
+<div class="flex flex-col">
+<span class="font-headline-sm text-headline-sm text-primary leading-none">100% Aman</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Proteksi Identitas Pelapor</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Right Hero Interactive Graphic -->
+<div class="lg:col-span-5 relative mt-space-lg lg:mt-0">
+<div class="bg-surface-container-low rounded-xl p-space-lg shadow-xl relative overflow-hidden">
+<div class="absolute top-0 right-0 w-32 h-32 bg-secondary-fixed/40 rounded-full blur-2xl"></div>
+<div class="flex items-center justify-between pb-space-md border-b-0">
+<div class="flex items-center gap-space-xs">
+<span class="w-3 h-3 rounded-full bg-error"></span>
+<span class="w-3 h-3 rounded-full bg-tertiary-container"></span>
+<span class="w-3 h-3 rounded-full bg-primary-fixed-dim"></span>
+</div>
+<span class="font-label-sm text-label-sm text-secondary uppercase tracking-wider font-bold">Status Pemrosesan Terkini</span>
+</div>
+<!-- Card item live preview -->
+<div class="flex flex-col gap-space-md pt-space-xs">
+<div class="bg-surface-container-lowest p-space-md rounded-lg shadow-sm flex flex-col gap-space-xs">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Tiket #LP-2025-08912</span>
+<span class="inline-flex items-center gap-1.5 px-space-sm py-0.5 rounded-full bg-secondary-fixed text-on-secondary-fixed font-label-sm text-label-sm font-semibold">
+<span class="w-2 h-2 rounded-full bg-secondary"></span> Penanganan Lapangan
+                  </span>
+</div>
+<h4 class="font-title-md text-title-md text-on-surface truncate">Perbaikan Aspal Amblas &amp; Drainase Utama</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant line-clamp-1">Kecamatan Cempaka Putih - Sektor Infrastruktur PU</p>
+<div class="w-full bg-surface-container rounded-full h-1.5 mt-space-xs">
+<div class="bg-primary h-1.5 rounded-full" style="width: 75%"></div>
+</div>
+</div>
+<div class="bg-surface-container-lowest p-space-md rounded-lg shadow-sm flex flex-col gap-space-xs">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Tiket #LP-2025-08908</span>
+<span class="inline-flex items-center gap-1.5 px-space-sm py-0.5 rounded-full bg-tertiary-fixed text-on-tertiary-fixed font-label-sm text-label-sm font-semibold">
+<span class="w-2 h-2 rounded-full bg-tertiary"></span> Verifikasi Berkas
+                  </span>
+</div>
+<h4 class="font-title-md text-title-md text-on-surface truncate">Antrean Pelayanan KTP Elektronik Terhambat</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant line-clamp-1">Kelurahan Sukatani - Disdukcapil Daerah</p>
+<div class="w-full bg-surface-container rounded-full h-1.5 mt-space-xs">
+<div class="bg-tertiary h-1.5 rounded-full" style="width: 40%"></div>
+</div>
+</div>
+<!-- Quick summary card -->
+<div class="bg-primary text-on-primary p-space-md rounded-lg flex items-center justify-between">
+<div class="flex items-center gap-space-md">
+<span class="material-symbols-outlined text-[28px] text-primary-fixed-dim">query_stats</span>
+<div class="flex flex-col">
+<span class="font-title-md text-title-md leading-tight">Sistem Online 24/7</span>
+<span class="font-body-sm text-body-sm text-primary-fixed-dim">Terhubung ke 34 OPD Daerah</span>
+</div>
+</div>
+<span class="material-symbols-outlined text-primary-fixed-dim">verified</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- SECTION 2: STATISTIK PENGADUAN REAL-TIME -->
+<section class="max-w-7xl mx-auto px-margin-mobile sm:px-margin -mt-8 relative z-20 w-full">
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-space-md">
+<!-- Metric Card 1 -->
+<div class="bg-surface-container-lowest rounded-xl p-space-lg shadow-md flex items-center justify-between transition-all hover:-translate-y-1">
+<div class="flex flex-col gap-space-xs">
+<span class="font-label-md text-label-md text-on-surface-variant font-medium">Total Diterima</span>
+<span class="font-headline-lg text-headline-lg text-primary tracking-tight">14.825</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Laporan terdaftar</span>
+</div>
+<div class="w-14 h-14 rounded-xl bg-primary-fixed/40 flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[30px]">inbox</span>
+</div>
+</div>
+<!-- Metric Card 2 -->
+<div class="bg-surface-container-lowest rounded-xl p-space-lg shadow-md flex items-center justify-between transition-all hover:-translate-y-1">
+<div class="flex flex-col gap-space-xs">
+<span class="font-label-md text-label-md text-on-surface-variant font-medium">Sedang Diproses</span>
+<span class="font-headline-lg text-headline-lg text-secondary tracking-tight">312</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Penanganan aktif</span>
+</div>
+<div class="w-14 h-14 rounded-xl bg-secondary-fixed/50 flex items-center justify-center text-secondary">
+<span class="material-symbols-outlined text-[30px]">pending_actions</span>
+</div>
+</div>
+<!-- Metric Card 3 -->
+<div class="bg-surface-container-lowest rounded-xl p-space-lg shadow-md flex items-center justify-between transition-all hover:-translate-y-1">
+<div class="flex flex-col gap-space-xs">
+<span class="font-label-md text-label-md text-on-surface-variant font-medium">Selesai Ditangani</span>
+<span class="font-headline-lg text-headline-lg text-primary-container tracking-tight">14.180</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Tuntas beresolusi</span>
+</div>
+<div class="w-14 h-14 rounded-xl bg-surface-container-high flex items-center justify-center text-primary-container">
+<span class="material-symbols-outlined text-[30px]">task_alt</span>
+</div>
+</div>
+<!-- Metric Card 4 -->
+<div class="bg-surface-container-lowest rounded-xl p-space-lg shadow-md flex items-center justify-between transition-all hover:-translate-y-1">
+<div class="flex flex-col gap-space-xs">
+<span class="font-label-md text-label-md text-on-surface-variant font-medium">Rata-rata Respon</span>
+<span class="font-headline-lg text-headline-lg text-tertiary tracking-tight">1.4 Hari</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Kecepatan tindak lanjut</span>
+</div>
+<div class="w-14 h-14 rounded-xl bg-tertiary-fixed/60 flex items-center justify-center text-tertiary">
+<span class="material-symbols-outlined text-[30px]">speed</span>
+</div>
+</div>
+</div>
+</section>
+<!-- SECTION 3: DUA TAB UTAMA INTERAKTIF (FORMULIR & CEK STATUS) -->
+<section class="max-w-7xl mx-auto px-margin-mobile sm:px-margin py-space-xl w-full" id="portal-interaktif">
+<!-- Tab Controls Container -->
+<div class="bg-surface-container-low p-1.5 rounded-xl flex items-center max-w-xl mx-auto mb-space-xl shadow-inner">
+<button class="flex-1 py-space-sm px-space-md rounded-lg font-title-md text-title-md flex items-center justify-center gap-space-xs bg-surface-container-lowest text-primary shadow-sm transition-all duration-200" id="tab-btn-form" onclick="switchMainTab('form')">
+<span class="material-symbols-outlined text-[20px]">assignment</span>
+<span>Buat Pengaduan Baru</span>
+</button>
+<button class="flex-1 py-space-sm px-space-md rounded-lg font-title-md text-title-md flex items-center justify-center gap-space-xs text-on-surface-variant hover:text-primary transition-all duration-200" id="tab-btn-status" onclick="switchMainTab('status')">
+<span class="material-symbols-outlined text-[20px]">manage_search</span>
+<span>Cek Status &amp; Riwayat</span>
+</button>
+</div>
+<!-- TAB 1: FORMULIR PENGADUAN RESMI -->
+<div class="block w-full" id="content-tab-form">
+<div class="max-w-3xl mx-auto bg-surface-container-lowest rounded-xl p-space-lg sm:p-space-xl shadow-lg">
+<div class="flex flex-col gap-space-xs pb-space-lg mb-space-lg bg-surface-container-low/50 -mx-space-lg sm:-mx-space-xl -mt-space-lg sm:-mt-space-xl p-space-lg sm:p-space-xl rounded-t-xl">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-primary uppercase font-bold tracking-wider">Formulir Pengaduan Pelayanan</span>
+<span class="px-space-sm py-0.5 rounded-full bg-secondary-fixed text-on-secondary-fixed font-label-sm text-label-sm">Format Tiket: #LP-2025-XXXXX</span>
+</div>
+<h2 class="font-headline-md text-headline-md text-on-surface">Formulir Pengaduan Masyarakat &amp; PNS</h2>
+<p class="font-body-md text-body-md text-on-surface-variant">Lengkapi data laporan Anda secara jelas dan objektif. Data Anda terlindungi oleh sistem enkripsi data daerah.</p>
+</div>
+<form class="flex flex-col gap-space-lg" onsubmit="handleFormSubmit(event)">
+<!-- Jenis Pelapor (Chip Selection) -->
+<div class="flex flex-col gap-space-xs">
+<label class="font-label-lg text-label-lg text-on-surface">Kategori Identitas Pelapor <span class="text-error">*</span></label>
+<div class="grid grid-cols-2 gap-space-md">
+<label class="cursor-pointer relative flex items-center justify-center gap-space-xs p-space-md rounded-lg bg-surface-container-low text-on-surface font-title-md text-title-md transition-all has-[:checked]:bg-primary has-[:checked]:text-on-primary shadow-sm">
+<input checked="" class="sr-only" name="jenis_pelapor" type="radio" value="masyarakat"/>
+<span class="material-symbols-outlined text-[20px]">groups</span>
+<span>Masyarakat Umum</span>
+</label>
+<label class="cursor-pointer relative flex items-center justify-center gap-space-xs p-space-md rounded-lg bg-surface-container-low text-on-surface font-title-md text-title-md transition-all has-[:checked]:bg-primary has-[:checked]:text-on-primary shadow-sm">
+<input class="sr-only" name="jenis_pelapor" type="radio" value="asn"/>
+<span class="material-symbols-outlined text-[20px]">badge</span>
+<span>PNS / ASN Daerah</span>
+</label>
+</div>
+</div>
+<!-- Identitas Grid -->
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-space-md">
+<div class="flex flex-col gap-space-xs">
+<label class="font-label-lg text-label-lg text-on-surface" for="nama_pelapor">Nama Lengkap Pelapor <span class="text-error">*</span></label>
+<input class="w-full px-space-md py-space-sm rounded-lg bg-surface-container-lowest text-on-surface text-body-md focus:outline-none focus:ring-2 focus:ring-primary shadow-sm" id="nama_pelapor" name="nama_pelapor" placeholder="Sesuai KTP / NIP" required="" type="text"/>
+</div>
+<div class="flex flex-col gap-space-xs">
+<label class="font-label-lg text-label-lg text-on-surface" for="email_pelapor">Alamat Email Aktif <span class="text-error">*</span></label>
+<input class="w-full px-space-md py-space-sm rounded-lg bg-surface-container-lowest text-on-surface text-body-md focus:outline-none focus:ring-2 focus:ring-primary shadow-sm" id="email_pelapor" name="email_pelapor" placeholder="alamat@domain.com" required="" type="email"/>
+</div>
+</div>
+<!-- Telepon & Kategori -->
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-space-md">
+<div class="flex flex-col gap-space-xs">
+<label class="font-label-lg text-label-lg text-on-surface" for="nomor_telepon">Nomor HP / WhatsApp Aktif <span class="text-error">*</span></label>
+<input class="w-full px-space-md py-space-sm rounded-lg bg-surface-container-lowest text-on-surface text-body-md focus:outline-none focus:ring-2 focus:ring-primary shadow-sm" id="nomor_telepon" name="nomor_telepon" placeholder="08xxxxxxxxxx" required="" type="tel"/>
+</div>
+<div class="flex flex-col gap-space-xs">
+<label class="font-label-lg text-label-lg text-on-surface" for="kategori_aduan">Kategori Pengaduan <span class="text-error">*</span></label>
+<select class="w-full px-space-md py-space-sm rounded-lg bg-surface-container-lowest text-on-surface text-body-md focus:outline-none focus:ring-2 focus:ring-primary shadow-sm" id="kategori_aduan" name="kategori_aduan" required="">
+<option disabled="" selected="" value="">Pilih Klasifikasi Bidang...</option>
+<option value="infrastruktur">Infrastruktur &amp; Jalan Raya</option>
+<option value="pelayanan">Pelayanan Publik &amp; Kesehatan</option>
+<option value="administrasi">Administrasi Kependudukan (Disdukcapil)</option>
+<option value="lingkungan">Lingkungan Hidup &amp; Kebersihan</option>
+<option value="kepegawaian">Kepegawaian &amp; Etika ASN</option>
+</select>
+</div>
+</div>
+<!-- Judul Laporan -->
+<div class="flex flex-col gap-space-xs">
+<label class="font-label-lg text-label-lg text-on-surface" for="judul">Judul Pengaduan <span class="text-error">*</span></label>
+<input class="w-full px-space-md py-space-sm rounded-lg bg-surface-container-lowest text-on-surface text-body-md focus:outline-none focus:ring-2 focus:ring-primary shadow-sm" id="judul" name="judul" placeholder="Ringkasan singkat inti permasalahan (maks. 100 karakter)" required="" type="text"/>
+</div>
+<!-- Lokasi Kejadian -->
+<div class="flex flex-col gap-space-xs">
+<label class="font-label-lg text-label-lg text-on-surface" for="lokasi_kejadian">Lokasi Kejadian Lengkap <span class="text-error">*</span></label>
+<input class="w-full px-space-md py-space-sm rounded-lg bg-surface-container-lowest text-on-surface text-body-md focus:outline-none focus:ring-2 focus:ring-primary shadow-sm" id="lokasi_kejadian" name="lokasi_kejadian" placeholder="Nama jalan, RT/RW, Kelurahan, Kecamatan, patokan khusus" required="" type="text"/>
+</div>
+<!-- Kronologi Detail -->
+<div class="flex flex-col gap-space-xs">
+<label class="font-label-lg text-label-lg text-on-surface" for="kronologi">Kronologi &amp; Rincian Masalah <span class="text-error">*</span></label>
+<textarea class="w-full px-space-md py-space-sm rounded-lg bg-surface-container-lowest text-on-surface text-body-md focus:outline-none focus:ring-2 focus:ring-primary shadow-sm resize-y" id="kronologi" name="kronologi" placeholder="Jelaskan kronologi kejadian secara terperinci, waktu kejadian, pihak terkait yang ditemui, dan dampak yang ditimbulkan..." required="" rows="4"></textarea>
+</div>
+<!-- Upload Bukti Pendukung -->
+<div class="flex flex-col gap-space-xs">
+<label class="font-label-lg text-label-lg text-on-surface">Bukti Pendukung / Lampiran Dokumen</label>
+<div class="p-space-lg rounded-xl bg-surface-container-low text-center flex flex-col items-center justify-center cursor-pointer hover:bg-surface-container-high transition-colors">
+<span class="material-symbols-outlined text-[36px] text-primary">cloud_upload</span>
+<p class="font-title-md text-title-md text-on-surface mt-space-xs">Seret dan jatuhkan berkas di sini atau klik untuk memilih</p>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Mendukung format JPG, PNG, PDF (Maksimal 10 MB per berkas)</span>
+<input class="hidden" id="file-upload" multiple="" type="file"/>
+</div>
+</div>
+<!-- Anonim Switch & Privasi -->
+<div class="bg-surface-container-low p-space-md rounded-xl flex items-center justify-between">
+<div class="flex items-center gap-space-md">
+<span class="material-symbols-outlined text-secondary text-[24px]">lock</span>
+<div class="flex flex-col">
+<span class="font-title-md text-title-md text-on-surface">Pengaduan Anonim / Rahasia</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Sembunyikan identitas Anda dari publik &amp; pihak terlapor</span>
+</div>
+</div>
+<label class="relative inline-flex items-center cursor-pointer">
+<input class="sr-only peer" name="is_anonim" type="checkbox"/>
+<div class="w-11 h-6 bg-surface-variant peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-on-primary after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-primary"></div>
+</label>
+</div>
+<!-- Submit Action -->
+<div class="flex flex-col gap-space-sm pt-space-xs">
+<button class="w-full py-space-md px-space-lg rounded-lg bg-primary hover:bg-primary-container text-on-primary font-title-md text-title-md shadow-md transition-all flex items-center justify-center gap-space-xs" type="submit">
+<span class="material-symbols-outlined text-[20px]">send</span>
+<span>Kirim Pengaduan &amp; Dapatkan Nomor Tiket</span>
+</button>
+<div class="flex items-center justify-center gap-space-xs text-on-surface-variant font-body-sm text-body-sm">
+<span class="material-symbols-outlined text-primary text-[16px]">verified_user</span>
+<span>Laporan otomatis diteruskan ke Admin Pemda dan diverifikasi dalam 1x24 jam.</span>
+</div>
+</div>
+</form>
+<!-- Success Alert Modal Simulation -->
+<div class="hidden mt-space-lg p-space-lg rounded-xl bg-surface-container text-primary shadow-sm" id="form-success-banner">
+<div class="flex items-start gap-space-md">
+<span class="material-symbols-outlined text-primary text-[28px]">check_circle</span>
+<div class="flex flex-col gap-space-xs">
+<h4 class="font-title-md text-title-md font-bold">Laporan Berhasil Diajukan!</h4>
+<p class="font-body-md text-body-md">Nomor Tiket Anda: <strong class="font-bold text-primary" id="generated-ticket-id">#LP-2025-08913</strong>. Simpan nomor tiket ini untuk melacak proses penanganan dinas terkait.</p>
+<div class="pt-space-xs">
+<button class="px-space-md py-1.5 rounded-lg bg-primary text-on-primary font-label-md text-label-md" onclick="viewGeneratedTicket()">Lihat Status Tiket Sekarang</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- TAB 2: CEK STATUS & RIWAYAT TANGGAPAN -->
+<div class="hidden w-full" id="content-tab-status">
+<div class="max-w-4xl mx-auto flex flex-col gap-space-lg">
+<!-- Search Bar Input Card -->
+<div class="bg-surface-container-lowest p-space-lg rounded-xl shadow-md flex flex-col sm:flex-row gap-space-sm items-center">
+<div class="relative flex-1 w-full">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-on-surface-variant text-[20px]">search</span>
+<input class="w-full pl-10 pr-space-md py-space-sm rounded-lg bg-surface-container-low text-on-surface text-body-md focus:outline-none focus:ring-2 focus:ring-primary" id="ticket-search-input" placeholder="Masukkan Nomor Tiket Pengaduan (cth: #LP-2025-04812)" type="text" value="#LP-2025-04812"/>
+</div>
+<button class="w-full sm:w-auto px-space-xl py-space-sm rounded-lg bg-primary hover:bg-primary-container text-on-primary font-title-md text-title-md shadow-sm transition-all flex items-center justify-center gap-space-xs" onclick="handleTicketLookup()">
+<span class="material-symbols-outlined text-[20px]">search</span>
+<span>Cek Progres Tiket</span>
+</button>
+</div>
+<!-- Tracking Results Card -->
+<div class="bg-surface-container-lowest rounded-xl p-space-lg sm:p-space-xl shadow-md flex flex-col gap-space-lg">
+<!-- Ticket Header Bar -->
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-space-sm pb-space-md border-b-0">
+<div class="flex flex-col">
+<div class="flex items-center gap-space-xs">
+<span class="font-label-sm text-label-sm text-on-surface-variant font-mono uppercase tracking-wider">Nomor Pengaduan</span>
+<span class="font-headline-sm text-headline-sm text-primary font-bold">#LP-2025-04812</span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Didaftarkan pada: 12 Mei 2025, 09:15 WIB via Portal Web</span>
+</div>
+<div>
+<span class="inline-flex items-center gap-space-xs px-space-md py-1.5 rounded-full bg-secondary-fixed text-on-secondary-fixed font-label-md text-label-md font-semibold">
+<span class="w-2.5 h-2.5 rounded-full bg-secondary animate-ping"></span>
+<span>STATUS: SEDANG DIPROSES</span>
+</span>
+</div>
+</div>
+<!-- Complaint Detail Heading -->
+<div class="bg-surface-container-low p-space-md rounded-xl flex flex-col gap-space-xs">
+<span class="font-label-sm text-label-sm text-secondary font-bold uppercase tracking-wider">Infrastruktur &amp; Penerangan Umum</span>
+<h3 class="font-title-md text-title-md sm:text-headline-sm text-on-surface font-bold">
+              Perbaikan Lampu Penerangan Jalan Umum (PJU) Rusak di Jl. Merdeka Barat No. 45
+            </h3>
+<p class="font-body-md text-body-md text-on-surface-variant">
+              Lampu penerangan padam total selama 4 hari berturut-turut, menyebabkan rawan kecelakaan di tikungan jalan dekat halte angkutan. Sudah dilaporkan ke RT setempat.
+            </p>
+<div class="flex items-center gap-space-md pt-space-xs text-on-surface-variant font-body-sm text-body-sm">
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-[16px]">location_on</span> Kelurahan Merdeka, Kec. Menteng</span>
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-[16px]">account_circle</span> Pelapor: Ahmad R. (PNS Daerah)</span>
+</div>
+</div>
+<!-- Progress Timeline Component -->
+<div class="flex flex-col gap-space-md">
+<span class="font-title-md text-title-md text-on-surface font-bold">Alur Penanganan Progresif</span>
+<div class="relative pl-6 sm:pl-8 flex flex-col gap-space-lg">
+<!-- Timeline vertical line bar -->
+<div class="absolute left-2.5 top-3 bottom-3 w-0.5 bg-surface-variant"></div>
+<!-- Step 1: Diterima -->
+<div class="relative flex flex-col sm:flex-row sm:items-baseline justify-between gap-space-xs">
+<div class="absolute -left-6 sm:-left-8 top-1 w-5 h-5 rounded-full bg-primary flex items-center justify-center text-on-primary">
+<span class="material-symbols-outlined text-[12px]">done</span>
+</div>
+<div class="flex flex-col">
+<span class="font-title-md text-title-md text-on-surface font-semibold">1. Pengaduan Diterima Sistem</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Laporan masuk dan tercatat dengan enkripsi pada basis data daerah.</span>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant font-mono">12 Mei 2025, 09:15 WIB</span>
+</div>
+<!-- Step 2: Diverifikasi -->
+<div class="relative flex flex-col sm:flex-row sm:items-baseline justify-between gap-space-xs">
+<div class="absolute -left-6 sm:-left-8 top-1 w-5 h-5 rounded-full bg-primary flex items-center justify-center text-on-primary">
+<span class="material-symbols-outlined text-[12px]">done</span>
+</div>
+<div class="flex flex-col">
+<span class="font-title-md text-title-md text-on-surface font-semibold">2. Verifikasi Dokumen &amp; Data</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Admin desk melakukan verifikasi kelayakan materi aduan dan bukti foto lokasi.</span>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant font-mono">12 Mei 2025, 10:45 WIB</span>
+</div>
+<!-- Step 3: Ditugaskan -->
+<div class="relative flex flex-col sm:flex-row sm:items-baseline justify-between gap-space-xs">
+<div class="absolute -left-6 sm:-left-8 top-1 w-5 h-5 rounded-full bg-primary flex items-center justify-center text-on-primary">
+<span class="material-symbols-outlined text-[12px]">done</span>
+</div>
+<div class="flex flex-col">
+<span class="font-title-md text-title-md text-on-surface font-semibold">3. Disposisi ke Dinas Terkait</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Diteruskan ke Suku Dinas Perhubungan &amp; Seksi Sarana Prasarana Jalan.</span>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant font-mono">12 Mei 2025, 13:20 WIB</span>
+</div>
+<!-- Step 4: Diproses (ACTIVE) -->
+<div class="relative flex flex-col sm:flex-row sm:items-baseline justify-between gap-space-xs">
+<div class="absolute -left-6 sm:-left-8 top-1 w-5 h-5 rounded-full bg-secondary-fixed ring-4 ring-secondary-container/50 flex items-center justify-center text-on-secondary-fixed">
+<span class="material-symbols-outlined text-[12px]">engineering</span>
+</div>
+<div class="flex flex-col">
+<span class="font-title-md text-title-md text-secondary font-bold">4. Penanganan Teknis di Lokasi (Aktif)</span>
+<span class="font-body-sm text-body-sm text-on-surface">Regu teknis Dishub Sektor 2 telah diberangkatkan untuk perbaikan tiang dan instalasi listrik.</span>
+</div>
+<span class="font-label-sm text-label-sm text-secondary font-mono font-bold">13 Mei 2025, 08:30 WIB</span>
+</div>
+<!-- Step 5: Selesai -->
+<div class="relative flex flex-col sm:flex-row sm:items-baseline justify-between gap-space-xs opacity-60">
+<div class="absolute -left-6 sm:-left-8 top-1 w-5 h-5 rounded-full bg-surface-container-highest flex items-center justify-center text-on-surface-variant">
+<span class="material-symbols-outlined text-[12px]">schedule</span>
+</div>
+<div class="flex flex-col">
+<span class="font-title-md text-title-md text-on-surface-variant font-semibold">5. Verifikasi Akhir &amp; Selesai</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Pengujian fungsi lampu dan permintaan umpan balik kepuasan pelapor.</span>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant font-mono">Estimasi 14 Mei 2025</span>
+</div>
+</div>
+</div>
+<!-- Official Response Box -->
+<div class="p-space-lg rounded-xl bg-surface-container-high flex flex-col gap-space-sm shadow-sm">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-sm">
+<div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center text-on-primary">
+<span class="material-symbols-outlined text-[18px]">support_agent</span>
+</div>
+<div class="flex flex-col">
+<span class="font-title-md text-title-md text-on-surface font-bold">Tanggapan Resmi Petugas Dinas</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Ir. Bambang W. - Tim Reaksi Cepat Dishub</span>
+</div>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Update: 13 Mei 2025, 09:10 WIB</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant pl-10 italic">
+              "Tim teknis sektor 2 telah memeriksa ballast dan kabel PJU di titik Jl. Merdeka Barat No. 45. Penggantian armature lampu LED 90W dan sekring panel utama dijadwalkan selesai sore ini pukul 16:30 WIB. Terima kasih atas kepedulian Anda terhadap fasilitas publik daerah."
+            </p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- SECTION 4: EKSPLORASI KATEGORI PENGADUAN -->
+<section class="w-full bg-surface-container-low py-space-xl">
+<div class="max-w-7xl mx-auto px-margin-mobile sm:px-margin flex flex-col gap-space-lg">
+<div class="flex flex-col sm:flex-row sm:items-end justify-between gap-space-sm">
+<div class="flex flex-col gap-space-xs">
+<span class="font-label-sm text-label-sm text-secondary font-bold uppercase tracking-wider">Cakupan Pelayanan Terpadu</span>
+<h2 class="font-headline-lg text-headline-lg-mobile sm:text-headline-lg text-on-surface">Eksplorasi Kategori Pengaduan</h2>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-xl">Semua pengaduan disalurkan langsung ke instansi teknis berwenang sesuai dengan peraturan zonasi pelayanan daerah.</p>
+</div>
+<a class="text-primary font-title-md text-title-md hover:underline inline-flex items-center gap-1" href="#portal-interaktif" onclick="switchMainTab('form')">
+<span>Lihat Semua Kategori Pelayanan</span>
+<span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+</a>
+</div>
+<!-- Grid 5 Kategori Interaktif -->
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-space-md">
+<!-- Kategori 1: Infrastruktur -->
+<div class="bg-surface-container-lowest p-space-lg rounded-xl shadow-sm hover:shadow-md transition-all flex flex-col justify-between group">
+<div class="flex flex-col gap-space-sm">
+<div class="w-12 h-12 rounded-lg bg-primary-fixed/50 flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-on-primary transition-colors">
+<span class="material-symbols-outlined text-[26px]">construction</span>
+</div>
+<h3 class="font-title-md text-title-md text-on-surface font-bold">1. Infrastruktur &amp; Jalan</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+              Jalan berlubang, perbaikan jembatan penghubung, gorong-gorong tersumbat, penerangan jalan umum (PJU), dan trotoar rusak.
+            </p>
+</div>
+<div class="pt-space-md flex items-center justify-between text-on-surface-variant font-label-sm text-label-sm">
+<span class="text-primary font-semibold">Dinas Bina Marga &amp; PU</span>
+<span class="material-symbols-outlined text-[16px] text-primary">arrow_right_alt</span>
+</div>
+</div>
+<!-- Kategori 2: Pelayanan Publik -->
+<div class="bg-surface-container-lowest p-space-lg rounded-xl shadow-sm hover:shadow-md transition-all flex flex-col justify-between group">
+<div class="flex flex-col gap-space-sm">
+<div class="w-12 h-12 rounded-lg bg-secondary-fixed/50 flex items-center justify-center text-secondary group-hover:bg-secondary group-hover:text-on-secondary transition-colors">
+<span class="material-symbols-outlined text-[26px]">local_hospital</span>
+</div>
+<h3 class="font-title-md text-title-md text-on-surface font-bold">2. Pelayanan Publik</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+              Standar mutu Puskesmas, ketersediaan obat RSUD, gangguan pasokan air bersih PDAM, dan antrean perizinan terpadu.
+            </p>
+</div>
+<div class="pt-space-md flex items-center justify-between text-on-surface-variant font-label-sm text-label-sm">
+<span class="text-secondary font-semibold">Dinkes, RSUD &amp; PDAM</span>
+<span class="material-symbols-outlined text-[16px] text-secondary">arrow_right_alt</span>
+</div>
+</div>
+<!-- Kategori 3: Administrasi Kependudukan -->
+<div class="bg-surface-container-lowest p-space-lg rounded-xl shadow-sm hover:shadow-md transition-all flex flex-col justify-between group">
+<div class="flex flex-col gap-space-sm">
+<div class="w-12 h-12 rounded-lg bg-surface-container-high flex items-center justify-center text-primary-container group-hover:bg-primary-container group-hover:text-on-primary transition-colors">
+<span class="material-symbols-outlined text-[26px]">badge</span>
+</div>
+<h3 class="font-title-md text-title-md text-on-surface font-bold">3. Administrasi Kependudukan</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+              Keterlambatan pencetakan KTP elektronik, perbaikan Kartu Keluarga, penerbitan akta kelahiran/kematian, dan legalisir kelurahan.
+            </p>
+</div>
+<div class="pt-space-md flex items-center justify-between text-on-surface-variant font-label-sm text-label-sm">
+<span class="text-primary-container font-semibold">Dinas Kependudukan &amp; Catatan Sipil</span>
+<span class="material-symbols-outlined text-[16px] text-primary-container">arrow_right_alt</span>
+</div>
+</div>
+<!-- Kategori 4: Lingkungan Hidup -->
+<div class="bg-surface-container-lowest p-space-lg rounded-xl shadow-sm hover:shadow-md transition-all flex flex-col justify-between group">
+<div class="flex flex-col gap-space-sm">
+<div class="w-12 h-12 rounded-lg bg-tertiary-fixed/60 flex items-center justify-center text-tertiary group-hover:bg-tertiary group-hover:text-on-tertiary transition-colors">
+<span class="material-symbols-outlined text-[26px]">eco</span>
+</div>
+<h3 class="font-title-md text-title-md text-on-surface font-bold">4. Lingkungan &amp; Kebersihan</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+              Tumpukan sampah liar, pemotongan pohon rawan tumbang, pencemaran aliran sungai warga, dan perawatan taman kota.
+            </p>
+</div>
+<div class="pt-space-md flex items-center justify-between text-on-surface-variant font-label-sm text-label-sm">
+<span class="text-tertiary font-semibold">Dinas Lingkungan Hidup</span>
+<span class="material-symbols-outlined text-[16px] text-tertiary">arrow_right_alt</span>
+</div>
+</div>
+<!-- Kategori 5: Kepegawaian & Disiplin -->
+<div class="bg-surface-container-lowest p-space-lg rounded-xl shadow-sm hover:shadow-md transition-all flex flex-col justify-between group sm:col-span-2 lg:col-span-1">
+<div class="flex flex-col gap-space-sm">
+<div class="w-12 h-12 rounded-lg bg-surface-container-highest flex items-center justify-center text-on-surface-variant group-hover:bg-on-surface-variant group-hover:text-on-primary transition-colors">
+<span class="material-symbols-outlined text-[26px]">gavel</span>
+</div>
+<h3 class="font-title-md text-title-md text-on-surface font-bold">5. Kepegawaian &amp; Etika ASN</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+              Laporan indikasi pungutan liar (pungli), pelanggaran kode etik aparatur sipil negara, dan ketidakhadiran petugas saat jam kerja.
+            </p>
+</div>
+<div class="pt-space-md flex items-center justify-between text-on-surface-variant font-label-sm text-label-sm">
+<span class="text-on-surface-variant font-semibold">Inspektorat &amp; BKPSDM</span>
+<span class="material-symbols-outlined text-[16px] text-on-surface-variant">arrow_right_alt</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- SECTION 5: ALUR PENGADUAN 4 LANGKAH & FAQ -->
+<section class="max-w-7xl mx-auto px-margin-mobile sm:px-margin py-space-xl w-full flex flex-col gap-space-xl">
+<!-- 4 Langkah Alur Penanganan -->
+<div class="flex flex-col gap-space-lg">
+<div class="text-center max-w-2xl mx-auto flex flex-col gap-space-xs">
+<span class="font-label-sm text-label-sm text-primary font-bold uppercase tracking-wider">Mekanisme Standar Operasional</span>
+<h2 class="font-headline-lg text-headline-lg-mobile sm:text-headline-lg text-on-surface">Alur Penanganan Laporan Transparan</h2>
+<p class="font-body-md text-body-md text-on-surface-variant">Empat tahapan terpadu demi memastikan keluhan terselesaikan hingga tuntas dan terukur.</p>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-space-md">
+<!-- Step 1 -->
+<div class="bg-surface-container-lowest p-space-lg rounded-xl shadow-sm flex flex-col gap-space-xs relative">
+<div class="w-10 h-10 rounded-full bg-primary text-on-primary flex items-center justify-center font-bold text-headline-sm">1</div>
+<h4 class="font-title-md text-title-md text-on-surface font-bold pt-space-xs">Sampaikan Laporan</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Tulis uraian pengaduan secara lengkap beserta bukti foto pendukung dan terima nomor tiket resmi.</p>
+</div>
+<!-- Step 2 -->
+<div class="bg-surface-container-lowest p-space-lg rounded-xl shadow-sm flex flex-col gap-space-xs relative">
+<div class="w-10 h-10 rounded-full bg-secondary text-on-secondary flex items-center justify-center font-bold text-headline-sm">2</div>
+<h4 class="font-title-md text-title-md text-on-surface font-bold pt-space-xs">Verifikasi &amp; Telaah</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Admin Diskominfo memvalidasi keabsahan data dalam kurun maksimal 1x24 jam kerja.</p>
+</div>
+<!-- Step 3 -->
+<div class="bg-surface-container-lowest p-space-lg rounded-xl shadow-sm flex flex-col gap-space-xs relative">
+<div class="w-10 h-10 rounded-full bg-tertiary text-on-tertiary flex items-center justify-center font-bold text-headline-sm">3</div>
+<h4 class="font-title-md text-title-md text-on-surface font-bold pt-space-xs">Tindak Lanjut Dinas</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Dinas teknis langsung bergerak ke lapangan dan mengunggah foto progres perbaikan berkala.</p>
+</div>
+<!-- Step 4 -->
+<div class="bg-surface-container-lowest p-space-lg rounded-xl shadow-sm flex flex-col gap-space-xs relative">
+<div class="w-10 h-10 rounded-full bg-surface-tint text-on-primary flex items-center justify-center font-bold text-headline-sm">4</div>
+<h4 class="font-title-md text-title-md text-on-surface font-bold pt-space-xs">Selesai &amp; Evaluasi</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Laporan ditutup dengan bukti tuntas, dan pelapor dapat memberikan ulasan kepuasan layanan.</p>
+</div>
+</div>
+</div>
+<!-- Accordion FAQ -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter items-start">
+<div class="lg:col-span-5 flex flex-col gap-space-sm">
+<span class="font-label-sm text-label-sm text-primary font-bold uppercase tracking-wider">Pertanyaan Sering Diajukan</span>
+<h3 class="font-headline-lg text-headline-lg-mobile sm:text-headline-lg text-on-surface">Pusat Bantuan &amp; Panduan Masyarakat</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">
+          Pahami hak dan kewajiban Anda sebagai pemohon pengaduan demi kelancaran penyelesaian layanan umum di daerah.
+        </p>
+<div class="mt-space-md p-space-md rounded-xl bg-tertiary-fixed/40 flex items-center gap-space-md">
+<span class="material-symbols-outlined text-tertiary text-[32px]">menu_book</span>
+<div class="flex flex-col">
+<span class="font-title-md text-title-md text-on-tertiary-fixed font-bold">Unduh Buku Panduan</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Format PDF ringkas tata cara melapor efektif</span>
+</div>
+</div>
+</div>
+<div class="lg:col-span-7 flex flex-col gap-space-sm">
+<!-- FAQ 1 -->
+<details class="group bg-surface-container-lowest p-space-md rounded-xl shadow-sm transition-all open:shadow-md" open="">
+<summary class="flex items-center justify-between cursor-pointer font-title-md text-title-md text-on-surface list-none">
+<span>Berapa lama laporan saya akan ditindaklanjuti?</span>
+<span class="material-symbols-outlined text-primary group-open:rotate-180 transition-transform">expand_more</span>
+</summary>
+<p class="font-body-md text-body-md text-on-surface-variant pt-space-sm">
+            Verifikasi data laporan dilakukan dalam waktu maksimal 1x24 jam kerja. Setelah diverifikasi, disposisi dinas teknis segera berjalan dengan waktu penyelesaian rata-rata 1 sampai 3 hari kerja tergantung tingkat kedaruratan infrastruktur atau administrasi.
+          </p>
+</details>
+<!-- FAQ 2 -->
+<details class="group bg-surface-container-lowest p-space-md rounded-xl shadow-sm transition-all open:shadow-md">
+<summary class="flex items-center justify-between cursor-pointer font-title-md text-title-md text-on-surface list-none">
+<span>Apakah identitas saya dijamin aman dan rahasia?</span>
+<span class="material-symbols-outlined text-primary group-open:rotate-180 transition-transform">expand_more</span>
+</summary>
+<p class="font-body-md text-body-md text-on-surface-variant pt-space-sm">
+            Sangat aman. Dengan mengaktifkan fitur <strong>Pengaduan Anonim / Rahasia</strong> pada formulir, identitas nama, NIK, dan nomor kontak Anda terenkripsi penuh dan tidak dapat dilihat oleh pihak terlapor maupun publik. Perlindungan saksi dan pelapor diatur sesuai UU Pelayanan Publik.
+          </p>
+</details>
+<!-- FAQ 3 -->
+<details class="group bg-surface-container-lowest p-space-md rounded-xl shadow-sm transition-all open:shadow-md">
+<summary class="flex items-center justify-between cursor-pointer font-title-md text-title-md text-on-surface list-none">
+<span>Bagaimana cara melampirkan bukti foto dan dokumen?</span>
+<span class="material-symbols-outlined text-primary group-open:rotate-180 transition-transform">expand_more</span>
+</summary>
+<p class="font-body-md text-body-md text-on-surface-variant pt-space-sm">
+            Anda dapat langsung menyeret file atau menekan tombol unggah dokumen pada bagian bukti pendukung formulir aduan. Berkas yang didukung meliputi file gambar (JPG/PNG) dan dokumen (PDF) dengan batas ukuran file maksimal 10 Megabyte per berkas.
+          </p>
+</details>
+<!-- FAQ 4 -->
+<details class="group bg-surface-container-lowest p-space-md rounded-xl shadow-sm transition-all open:shadow-md">
+<summary class="flex items-center justify-between cursor-pointer font-title-md text-title-md text-on-surface list-none">
+<span>Apa yang terjadi jika laporan ditolak oleh verifikator?</span>
+<span class="material-symbols-outlined text-primary group-open:rotate-180 transition-transform">expand_more</span>
+</summary>
+<p class="font-body-md text-body-md text-on-surface-variant pt-space-sm">
+            Apabila laporan ditolak, Anda akan menerima pemberitahuan resmi via Email dan WhatsApp beserta alasan penolakan secara spesifik (misalnya: kurangnya bukti foto, lokasi di luar kewenangan pemda, atau laporan duplikat). Anda dapat mengajukan revisi laporan kembali.
+          </p>
+</details>
+</div>
+</div>
+</section>
+<!-- SECTION 6: KONTAK DAN INFORMASI INSTANSI -->
+<section class="w-full bg-surface-container-low py-space-xl">
+<div class="max-w-7xl mx-auto px-margin-mobile sm:px-margin flex flex-col gap-space-lg">
+<div class="flex flex-col gap-space-xs text-center max-w-2xl mx-auto">
+<span class="font-label-sm text-label-sm text-primary font-bold uppercase tracking-wider">Layanan Terpadu Satu Pintu</span>
+<h2 class="font-headline-lg text-headline-lg-mobile sm:text-headline-lg text-on-surface">Pusat Bantuan &amp; Kontak Instansi</h2>
+<p class="font-body-md text-body-md text-on-surface-variant">Hubungi layanan pengaduan langsung jika membutuhkan penanganan darurat atau konsultasi tatap muka.</p>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-space-md">
+<!-- Hotline Card 1 -->
+<div class="bg-surface-container-lowest p-space-lg rounded-xl shadow-sm flex flex-col gap-space-sm">
+<div class="w-12 h-12 rounded-full bg-error-container text-on-error-container flex items-center justify-center">
+<span class="material-symbols-outlined text-[24px]">call</span>
+</div>
+<span class="font-title-md text-title-md text-on-surface font-bold">Layanan Kedaruratan</span>
+<span class="font-headline-sm text-headline-sm text-error font-bold">112 (Bebas Pulsa)</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Khusus kejadian bencana, kebakaran, kecelakaan dan medis darurat 24 jam non-stop.</p>
+</div>
+<!-- Hotline Card 2 -->
+<div class="bg-surface-container-lowest p-space-lg rounded-xl shadow-sm flex flex-col gap-space-sm">
+<div class="w-12 h-12 rounded-full bg-secondary-fixed text-on-secondary-fixed flex items-center justify-center">
+<span class="material-symbols-outlined text-[24px]">forum</span>
+</div>
+<span class="font-title-md text-title-md text-on-surface font-bold">WhatsApp Resmi Aduan</span>
+<span class="font-headline-sm text-headline-sm text-secondary font-bold">0812-9988-7766</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Kirim pesan interaktif langsung dengan bot verifikasi dan petugas piket harian.</p>
+</div>
+<!-- Hotline Card 3 -->
+<div class="bg-surface-container-lowest p-space-lg rounded-xl shadow-sm flex flex-col gap-space-sm">
+<div class="w-12 h-12 rounded-full bg-primary-fixed text-on-primary-fixed flex items-center justify-center">
+<span class="material-symbols-outlined text-[24px]">location_city</span>
+</div>
+<span class="font-title-md text-title-md text-on-surface font-bold">Loket Pelayanan Terpadu</span>
+<span class="font-title-md text-title-md text-primary font-bold">Gedung Pemda Lt. 1</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Jl. Pangeran Diponegoro No. 1, Sektor Pelayanan Publik Terpadu Daerah.</p>
+</div>
+<!-- Hotline Card 4 -->
+<div class="bg-surface-container-lowest p-space-lg rounded-xl shadow-sm flex flex-col gap-space-sm">
+<div class="w-12 h-12 rounded-full bg-tertiary-fixed text-on-tertiary-fixed flex items-center justify-center">
+<span class="material-symbols-outlined text-[24px]">schedule</span>
+</div>
+<span class="font-title-md text-title-md text-on-surface font-bold">Jam Kerja Pelayanan</span>
+<span class="font-title-md text-title-md text-tertiary font-bold">Senin - Jumat</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Pukul 08.00 s/d 16.00 WIB. Pelaporan via website tetap buka 24 jam setiap hari.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Interactive JavaScript logic -->
+<script>
+    function switchMainTab(tab) {
+      const btnForm = document.getElementById('tab-btn-form');
+      const btnStatus = document.getElementById('tab-btn-status');
+      const contentForm = document.getElementById('content-tab-form');
+      const contentStatus = document.getElementById('content-tab-status');
+
+      if (tab === 'form') {
+        btnForm.classList.add('bg-surface-container-lowest', 'text-primary', 'shadow-sm');
+        btnForm.classList.remove('text-on-surface-variant');
+        btnStatus.classList.remove('bg-surface-container-lowest', 'text-primary', 'shadow-sm');
+        btnStatus.classList.add('text-on-surface-variant');
+
+        contentForm.classList.remove('hidden');
+        contentForm.classList.add('block');
+        contentStatus.classList.add('hidden');
+        contentStatus.classList.remove('block');
+      } else {
+        btnStatus.classList.add('bg-surface-container-lowest', 'text-primary', 'shadow-sm');
+        btnStatus.classList.remove('text-on-surface-variant');
+        btnForm.classList.remove('bg-surface-container-lowest', 'text-primary', 'shadow-sm');
+        btnForm.classList.add('text-on-surface-variant');
+
+        contentStatus.classList.remove('hidden');
+        contentStatus.classList.add('block');
+        contentForm.classList.add('hidden');
+        contentForm.classList.remove('block');
+      }
+    }
+
+    function handleFormSubmit(event) {
+      event.preventDefault();
+      const banner = document.getElementById('form-success-banner');
+      const randomNum = Math.floor(10000 + Math.random() * 90000);
+      const generatedTicket = '#LP-2025-' + randomNum;
+      
+      document.getElementById('generated-ticket-id').innerText = generatedTicket;
+      document.getElementById('ticket-search-input').value = generatedTicket;
+      banner.classList.remove('hidden');
+      
+      banner.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    }
+
+    function viewGeneratedTicket() {
+      switchMainTab('status');
+      const contentStatus = document.getElementById('content-tab-status');
+      contentStatus.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+
+    function handleTicketLookup() {
+      const input = document.getElementById('ticket-search-input').value.trim();
+      if (!input) {
+        alert('Silakan ketik nomor tiket pengaduan terlebih dahulu.');
+      } else {
+        alert('Memuat rincian perkembangan tiket: ' + input);
+      }
+    }
+  </script>
+</div></main><footer class="w-full bg-surface-container-low text-on-surface mt-space-xl shadow-[0_-1px_4px_rgba(8,98,136,0.04)]"><div class="max-w-7xl mx-auto px-margin py-space-xl grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-gutter"><div class="flex flex-col gap-space-sm"><div class="flex items-center gap-space-sm mb-space-xs"><img alt="Logo LaporDaerah" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1Va-MLiOtp1tvq0NIxAJugJ578xQotoqQl1vGRqiZ82-zW81LifEnU05lb8mxz7mASwSF8LkXXBLqK2Xg9TATodnjpTkIMaJcpodorWFUMZan-PQru7mS3cboHpBeYIkG-aRFEuqNPQF1zPUo55mRfyg6t2nbwVkgogZ1lkEOeOpX9pfAjVyTLaxf61GtuuhYtSyTfHeozk8QYPUlJNVcHfKgV3pOMNcMwENXHnWeDuzUS3Tgk0Lcbs3k8"/><span class="font-title-md text-title-md text-primary font-bold">LaporDaerah</span></div><p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">Kanal aspirasi dan pengaduan daring resmi Pemerintah Daerah. Mempercepat penyelesaian keluhan pelayanan publik secara transparan, akuntabel, dan terukur.</p><div class="inline-flex items-center gap-space-xs mt-space-xs px-space-md py-space-xs rounded-full bg-tertiary-fixed text-on-tertiary-fixed font-label-sm text-label-sm w-fit"><span class="material-symbols-outlined text-[16px]">verified</span>Terhubung SP4N LAPOR! RI</div></div><div class="flex flex-col gap-space-sm"><span class="font-title-md text-title-md text-primary font-bold">Tautan Layanan Publik</span><ul class="flex flex-col gap-space-xs font-body-sm text-body-sm text-on-surface-variant"><li><a class="hover:text-primary transition-colors" href="#">Standar Pelayanan Minimal</a></li><li><a class="hover:text-primary transition-colors" href="#">Maklumat Pelayanan Terpadu</a></li><li><a class="hover:text-primary transition-colors" href="#">Statistik Penanganan Aduan</a></li><li><a class="hover:text-primary transition-colors" href="#">Daftar Dinas &amp; Badan Daerah</a></li><li><a class="hover:text-primary transition-colors" href="#">Kebijakan Privasi Pengadu</a></li></ul></div><div class="flex flex-col gap-space-sm"><span class="font-title-md text-title-md text-primary font-bold">Pusat Kontak Cepat</span><div class="flex flex-col gap-space-xs font-body-sm text-body-sm text-on-surface-variant"><div class="flex items-center gap-space-xs"><span class="material-symbols-outlined text-secondary text-[18px]">call</span><span class="font-label-md text-label-md text-on-surface">Darurat 24 Jam: 112 (Bebas Pulsa)</span></div><div class="flex items-center gap-space-xs"><span class="material-symbols-outlined text-secondary text-[18px]">headset_mic</span><span>Call Center Layanan: 1500-724</span></div><div class="flex items-center gap-space-xs"><span class="material-symbols-outlined text-secondary text-[18px]">mail</span><span>pengaduan@pemda.go.id</span></div><div class="flex items-center gap-space-xs"><span class="material-symbols-outlined text-secondary text-[18px]">schedule</span><span>Senin - Jumat: 08.00 - 16.00 WIB</span></div></div></div><div class="flex flex-col gap-space-sm"><span class="font-title-md text-title-md text-primary font-bold">Kepatuhan &amp; Regulasi</span><p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">Penyelenggaraan sistem ini tunduk pada UU No. 25 Tahun 2009 tentang Pelayanan Publik dan PermenPAN-RB No. 62 Tahun 2018.</p><div class="p-space-sm rounded-lg bg-surface-container flex items-center gap-space-sm"><span class="material-symbols-outlined text-primary text-[24px]">gavel</span><span class="font-body-sm text-body-sm text-on-surface-variant">Dipantau Ombudsman Perwakilan Daerah</span></div></div></div><div class="w-full bg-surface-container py-space-md"><div class="max-w-7xl mx-auto px-margin flex flex-col sm:flex-row items-center justify-between gap-space-sm font-body-sm text-body-sm text-on-surface-variant"><span>© 2025 Dinas Komunikasi dan Informatika Pemerintah Daerah. Seluruh hak cipta dilindungi undang-undang.</span><div class="flex items-center gap-space-md"><a class="hover:text-primary transition-colors" href="#">Syarat Layanan</a><a class="hover:text-primary transition-colors" href="#">Keterbukaan Informasi</a></div></div></div></footer></body></html>
